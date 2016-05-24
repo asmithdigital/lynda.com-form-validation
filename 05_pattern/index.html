@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Form Validation &amp Processing</title>
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="mystyle.css" />	
+</head>
+<body>
+<form method="get" enctype="multipart/form-data" class="group" action="#">
+	<ol>
+		<li class="group">
+			<label for="patternfield">Pattern Matching</label>
+			<input name="myfield" pattern="[.Tt]exas" /> <!-- upper t or lower t and exas -->
+			<input name="myfield" pattern="[a-z]+" /> <!-- lowercase any number -->
+			<input name="myfield" pattern="[A-Za-z]+" /> <!-- and number or upper and lowercase -->
+			<input name="myfield" pattern="[0-9 ]{5}" /> <!-- 5 numbers -->
+			<input name="myfield" pattern="\d{5}\-\d{4}" /> <!-- digit 5 times with dash and then 4 numbers -->
+
+			<input name="myfield" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" /> <!-- Password (UpperCase, LowerCase and Number) -->
+
+			<!-- Look up petterns http://html5pattern.com -->
+
+		</li>
+	</ol>
+<button type="submit">send</button>
+</form>
+</body>
+</html>
